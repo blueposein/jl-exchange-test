@@ -1,21 +1,105 @@
 body {
-    
-    background-image: url("carousel/1092587.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Cousine', monospace;
+  background-image: url("carousel/1092587.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
+.body2 {
+  background-image: url("carousel/backgif.gif");
+  background-size: cover;
+  background-repeat: repeat;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+  
 
 .active {
-    color: yellow !important;
+  color: #ffc107 !important;
 }
 
-.navbartext{
-    color: white;
+
+.textfooter {
+  padding-left: 800px;
+  background-color: #ffc107;
+  color: #696969;
+  height: 30px;
+  clear: both;
+  position: relative !important;
+  margin-top: 0px;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
+.fa-facebook-f {
+  margin-left: 10px;
+}
+
+.iconsfooter {
+  bottom: 0;
+  position: center !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+#modalboton {
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+
+#modalbotoncorrect {
+  margin-top: 52px;
+  margin-left: 50px;
+}
+
+/* -------------------------CSS CLOCK--------------------------------- */ */
+
+.clock {
+  height: 10vh;
+  color: black;
+  font-size: 10vh;
+  font-family: sans-serif;
+  line-height: 10vh;
+  display: flex;
+  position: relative;
+  /*background: green;*/
+  overflow: hidden;
+}
+
+.clock::before,
+.clock::after {
+  content: "";
+  width: 7ch;
+  height: 3vh;
+  background: linear-gradient(to top, transparent, black);
+  position: absolute;
+  z-index: 2;
+}
+
+.clock::after {
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, black);
+}
+
+.clock > div {
+  display: flex;
+}
+
+.tick {
+  line-height: 17vh;
+}
+
+.tick-hidden {
+  opacity: 0;
+}
+
+.move {
+  animation: move linear 1s infinite;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0vh);
+  }
+  to {
+    transform: translateY(-20vh);
+  }
 }
